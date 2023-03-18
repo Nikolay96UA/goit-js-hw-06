@@ -9,11 +9,8 @@ const ingredients = [
 
 const ingredientsEl = document.querySelector("#ingredients");
 
-for (let ingredient of ingredients) {
-  const liEl = document.createElement("li");
-  liEl.textContent = ingredient;
-  liEl.classList.add("item");
-  ingredientsEl.append(liEl);
-}
+const markup = ingredients
+  .map((ingredient) => `<li class="item">${ingredient}</li>`)
+  .join("");
 
-document.body.append(ingredientsEl);
+ingredientsEl.insertAdjacentHTML("beforeend", markup);
