@@ -5,10 +5,11 @@ inputEl.addEventListener("blur", validEl);
 
 function validEl(event) {
   const inputValue = event.currentTarget.value.length;
-  if (inputValue < validValue) {
-    inputEl.classList.add("invalid");
-  } else {
-    inputEl.classList.remove("invalid");
+  if (inputValue === validValue) {
     inputEl.classList.add("valid");
+    inputEl.classList.remove("invalid");
+  } else {
+    inputEl.classList.add("invalid");
+    inputEl.classList.remove("valid");
   }
 }
