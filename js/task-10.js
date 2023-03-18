@@ -23,9 +23,7 @@ const createBoxes = (amount) => {
 };
 
 const destroyBoxes = () => {
-  while (boxes.firstElementChild) {
-    boxes.firstElementChild.remove();
-  }
+  boxes.innerHTML = "";
 };
 
 btnCreate.addEventListener("click", createBoxes);
