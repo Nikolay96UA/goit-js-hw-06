@@ -11,7 +11,7 @@ const boxes = document.querySelector("#boxes");
 
 const createBoxes = (amount) => {
   amount = Number(inputValue.value);
-  const ArrayBox = [];
+  const arrayBox = [];
 
   for (let i = 1; i <= amount; i += 1) {
     const divEl = document.createElement("div");
@@ -19,10 +19,10 @@ const createBoxes = (amount) => {
     divEl.style.height = `${30 + 10 * i}px`;
     divEl.style.backgroundColor = getRandomHexColor();
     divEl.style.margin = "5px";
-    ArrayBox.push(divEl);
+    arrayBox.push(divEl);
   }
 
-  boxes.append(...ArrayBox);
+  boxes.append(...arrayBox);
 };
 
 const destroyBoxes = () => {
